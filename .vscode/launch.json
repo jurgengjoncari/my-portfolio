@@ -1,0 +1,36 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program (Apple)",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/app.js",
+            "args": [
+                "--service=iCloud",
+                "--email=jurgen_gjoncari@icloud.com",
+                "--password=wxln-zfur-ltdf-vdph"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program (Google)",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/app.js",
+            "args": [
+                "--service=Gmail",
+                "--email=jurgen.gjoncari@gmail.com",
+                "--password=mwgwmqjtukuzyrii",
+            ]
+        }
+    ]
+}
