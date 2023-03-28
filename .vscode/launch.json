@@ -7,7 +7,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program (Apple)",
+            "name": "Launch Program (iCloud)",
             "skipFiles": [
                 "<node_internals>/**"
             ],
@@ -21,7 +21,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program (Google)",
+            "name": "Launch Program (Gmail)",
             "skipFiles": [
                 "<node_internals>/**"
             ],

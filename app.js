@@ -6,6 +6,8 @@ const app = express()
 
 app.use(express.urlencoded({ extended: false }))
 
+app.use(express.static('public'))
+
 app.post('/send', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: args.service,
