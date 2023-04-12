@@ -1,6 +1,7 @@
 const express = require('express')
 const nodemailer = require('nodemailer')
-const args = require('minimist')(process.argv.slice(2))
+
+const myAccount = require('minimist')(process.argv.slice(2))
 
 const app = express()
 
@@ -9,20 +10,22 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static('public'))
 
 app.post('/send', (req, res) => {
+    const { email, subject, message } = req.body
+
     const transporter = nodemailer.createTransport({
-        service: args.service,
+        service: myAccount.service,
         auth: {
-            user: args.email,
-            pass: args.password
+            user: myAccount.email,
+            pass: myAccount.password
         },
         timeout: 10000
     })
 
     const mailOptions = {
-        from: req.body.email,
-        to: args.email,
-        subject: req.body.subject,
-        text: req.body.message
+        from: email,
+        to: myAccount.email,
+        subject: subject,
+        text: message
     }
 
     transporter.sendMail(mailOptions, (error, info) => {
@@ -37,7 +40,7 @@ app.post('/send', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
+    res.sendFile(__dirname + '/public/index.html')
 })
 
 app.listen(3000, () => {

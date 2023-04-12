@@ -4,7 +4,7 @@
 	<title>My Portfolio</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
 		<section id="portfolio">
 			<h2>Portfolio</h2>
 			<div class="project">
-				<img src="public/images/calculator_(iPad Mini).png" alt="Calculator">
+				<img src="/images/calculator-ipad-mini.png" alt="Calculator">
 				<h3>Calculator</h3>
 				<p>This is a simple calculator that I created using HTML, Bootstrap, and JavaScript. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. It features a clean and intuitive interface that makes it easy to use with a responsive design that works on desktop and mobile devices. I created this project as a way to improve my JavaScript skills and to learn more about building interactive web applications. </p>
 				<a target="_blank" href="https://jurgengjoncari.github.io/calculator/">View project</a>
@@ -42,14 +42,14 @@
 		</section>
 		<section id="contact">
 			<h2>Contact Me</h2>
-			<form action="/send" method="POST">
+			<form action="#" method="POST" onsubmit="submit(event)">
 				<label for="email">Email:</label>
 				<input type="email" id="email" name="email"><br>
 				<label for="subject">Subject:</label>
 				<input type="text" id="subject" name="subject"><br>
 				<label for="message">Message:</label>
 				<textarea id="message" name="message"></textarea><br>
-				<button type="submit">Send</button>
+				<button type="submit" id="submit-btn">Send</button>
 			</form>
 		</section>
 	</main>
@@ -64,5 +64,6 @@
 			<p>&copy; 2023 designed and developed by Jurgen Gjonçari</p>
 		</div>
 	</footer>
+	<script src="script.js"></script>
 </body>
 </html>
