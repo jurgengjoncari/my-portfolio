@@ -42,7 +42,7 @@
 		</section>
 		<section id="contact">
 			<h2>Contact Me</h2>
-			<form action="#" method="POST" onsubmit="submit(event)">
+			<form action="/send" method="POST" onsubmit="sendEmail(event)" enctype="multipart/form-data">
 				<label for="email">Email:</label>
 				<input type="email" id="email" name="email"><br>
 				<label for="subject">Subject:</label>

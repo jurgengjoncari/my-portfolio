@@ -5,6 +5,15 @@
 	box-sizing: border-box;
 }
 
+/* Colors */
+
+:root {
+	--color-blue: hsl(210, 100%, 40%);
+	--color-red: hsl(0, 100%, 50%);
+	--color-yellow: hsl(60, 100%, 50%);
+	--color-green: hsl(120, 100%, 40%);
+  }
+  
 /* Typography */
 body {
 	font-family: Arial, sans-serif;
@@ -104,4 +113,9 @@ footer {
 	color: #ddd;
 	padding: 20px;
 	text-align: center;
+}
+
+button {
+	background-color: var(--red);
+	color: var(--white);
 }

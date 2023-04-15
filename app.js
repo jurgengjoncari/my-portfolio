@@ -5,7 +5,9 @@ const myAccount = require('minimist')(process.argv.slice(2))
 
 const app = express()
 
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: true }))
+
+app.use(express.json())
 
 app.use(express.static('public'))
 
