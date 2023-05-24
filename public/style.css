@@ -5,15 +5,6 @@
 	box-sizing: border-box;
 }
 
-/* Colors */
-
-:root {
-	--color-blue: hsl(210, 100%, 40%);
-	--color-red: hsl(0, 100%, 50%);
-	--color-yellow: hsl(60, 100%, 50%);
-	--color-green: hsl(120, 100%, 40%);
-  }
-  
 /* Typography */
 body {
 	font-family: Arial, sans-serif;
@@ -23,11 +14,26 @@ body {
 	background-color: #000;
 }
 
-h1, h2, h3 {
+/* Text content */
+h1, h2, h3, h4, h5, h6, hr, p, blockquote, address, pre, 
+/* List content */
+details, summary, dl, dt, dd, ul, li, 
+/* Table content */
+caption, colgroup, col, td, 
+/* Form content */
+fieldset, legend, datalist, option, label, input, meter, select, optgroup, 
+option, textarea, button, 
+/* Inline text semantics */
+abbr, b, bdi, bdo, br, cite, code, data, del, dfn, em, i, ins, kbd, mark, q, 
+rp, rt, s, samp, small, span, strong, sub, sup, time, u, var, wbr {
+	max-width: 43rem;
+}
+
+/* h1, h2, h3 {
 	font-weight: normal;
 	margin: 0 0 20px;
 	color: #fff;
-}
+} */
 
 /* Layout */
 header {
@@ -53,7 +59,6 @@ nav ul li a {
 }
 
 main {
-	max-width: 800px;
 	margin: 0 auto;
 	padding: 20px;
 }
@@ -64,10 +69,19 @@ section {
 
 .project {
 	margin-bottom: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 }
 
 .project img {
 	max-width: 100%;
+	width: 50%; /* Set width to 50% for inline layout */
+	margin-right: 20px;
+}
+
+.project-content {
+	flex: 1;
 }
 
 form label {
@@ -113,9 +127,4 @@ footer {
 	color: #ddd;
 	padding: 20px;
 	text-align: center;
-}
-
-button {
-	background-color: var(--red);
-	color: var(--white);
 }
