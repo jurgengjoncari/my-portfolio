@@ -14,19 +14,24 @@ body {
 	background-color: #000;
 }
 
-/* Text content */
+p {
+	margin-bottom: 1.5em;
+}
+
+/* Text block content */
 h1, h2, h3, h4, h5, h6, hr, p, blockquote, address, pre, 
 /* List content */
 details, summary, dl, dt, dd, ul, li, 
 /* Table content */
 caption, colgroup, col, td, 
 /* Form content */
-fieldset, legend, datalist, option, label, input, meter, select, optgroup, 
+form, fieldset, legend, datalist, option, label, input, meter, select, optgroup, 
 option, textarea, button, 
 /* Inline text semantics */
 abbr, b, bdi, bdo, br, cite, code, data, del, dfn, em, i, ins, kbd, mark, q, 
 rp, rt, s, samp, small, span, strong, sub, sup, time, u, var, wbr {
 	max-width: 43rem;
+	font-weight: normal;
 }
 
 /* h1, h2, h3 {
@@ -67,21 +72,46 @@ section {
 	margin: 40px 0;
 }
 
-.project {
-	margin-bottom: 40px;
+.row {
 	display: flex;
-	flex-wrap: wrap;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.center-horizontally {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center-vertically {
+	display: flex;
+	align-self: center;
+}
+
+.center-children-horizontally {
+	display: flex;
 	align-items: center;
 }
 
+.center-chhildren-vertically {
+	display: flex;
+	align-items: center;
+}
+
+.project {
+	margin-bottom: 40px;
+}
+
 .project img {
-	max-width: 100%;
-	width: 50%; /* Set width to 50% for inline layout */
-	margin-right: 20px;
+	max-width: 100%; /* Set the image to occupy full width */
+	margin-bottom: 20px; /* Add spacing between image and text */
 }
 
 .project-content {
-	flex: 1;
+	margin-top: 20px; /* Add spacing between image and text */
 }
 
 form label {
@@ -127,4 +157,23 @@ footer {
 	color: #ddd;
 	padding: 20px;
 	text-align: center;
+}
+
+/* Media query for inline layout on wider screens */
+@media (min-width: 768px) {
+	.project-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.project img {
+		max-width: 30%;
+		margin-bottom: 0;
+		margin-right: 20px;
+	}
+
+	.project-description {
+		display: inline;
+	}
 }

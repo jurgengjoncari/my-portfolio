@@ -21,18 +21,22 @@
 	<main>
 		<section id="about">
 			<h2>About Me</h2>
-			<p>My name is Jurgen Gjonçari, and I'm a web developer with experience in Angular, Loopback, NodeJS, JavaScript, MongoDB, and more. Although I studied Mathematics at Luigj Gurakuqi University of Shkodra, I decided to pursue a career in web development in 2022. </p>
-			<p>As a developer, I'm a perfectionist and like to think out of the box to find the best solutions. I'm always eager to learn and explore new technologies to improve my skills. </p>
-			<p>In my free time, I enjoy painting and reading about new technologies, as well as exploring the deeper meanings of the world around us. </p>
+			<div class="center-children-horizontally column">
+				<p>My name is Jurgen Gjonçari, and I'm a web developer with experience in Angular, Loopback, NodeJS, JavaScript, MongoDB, and more. Although I studied Mathematics at Luigj Gurakuqi University of Shkodra, I decided to pursue a career in web development in 2022. </p>
+				<p>As a developer, I'm a perfectionist and like to think out of the box to find the best solutions. I'm always eager to learn and explore new technologies to improve my skills. </p>
+				<p>In my free time, I enjoy painting and reading about new technologies, as well as exploring the deeper meanings of the world around us. </p>
+			</div>
 		</section>
-		<section id="portfolio" class="project">
-			<img src="./images/calculator-ipad-mini.png" alt="Calculator">
-			<div class="project-content">
-				<h2>Portfolio</h2>
-				<div class="project">
-					<h3>Calculator</h3>
-					<p>This is a simple calculator that I created using HTML, Bootstrap, and JavaScript. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. It features a clean and intuitive interface that makes it easy to use with a responsive design that works on desktop and mobile devices. I created this project as a way to improve my JavaScript skills and to learn more about building interactive web applications. </p>
-					<a target="_blank" href="https://jurgengjoncari.github.io/calculator/">View project</a>
+		<section id="portfolio">
+			<h2>Portfolio</h2>
+			<div class="project">
+				<h3 class="center-horizontally project-title">Calculator</h3>
+				<div class="project-content">
+					<img src="./images/jurgengjoncari.github.io_calculator.png" alt="Calculator">
+					<div class="project-description">
+						<p>This is a simple calculator that I created using HTML, Bootstrap, and JavaScript. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. It features a clean and intuitive interface that makes it easy to use with a responsive design that works on desktop and mobile devices. I created this project as a way to improve my JavaScript skills and to learn more about building interactive web applications. </p>
+						<a target="_blank" href="https://jurgengjoncari.github.io/calculator/">View project</a>
+					</div>
 				</div>
 			</div>
 			<!-- <div class="project">
@@ -44,13 +48,19 @@
 		</section>
 		<section id="contact">
 			<h2>Contact Me</h2>
-			<form action="/send" method="POST" onsubmit="sendEmail(event)" enctype="multipart/form-data">
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email"><br>
-				<label for="subject">Subject:</label>
-				<input type="text" id="subject" name="subject"><br>
-				<label for="message">Message:</label>
-				<textarea id="message" name="message"></textarea><br>
+			<form action="/send" method="POST" onsubmit="sendEmail(event)" enctype="multipart/form-data" class="center-horizontally">
+				<div>
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email"><br>
+				</div>
+				<div>
+					<label for="subject">Subject:</label>
+					<input type="text" id="subject" name="subject"><br>
+				</div>
+				<div>
+					<label for="message">Message:</label>
+					<textarea id="message" name="message"></textarea><br>
+				</div>
 				<button type="submit" id="submit-btn">Send</button>
 			</form>
 		</section>
