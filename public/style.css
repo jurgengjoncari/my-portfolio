@@ -81,14 +81,20 @@ section {
 	flex-direction: column;
 }
 
-.center-horizontally {
-	margin-left: auto;
-	margin-right: auto;
+.center-vertically, h2, h3 {
+	display: flex;
+	justify-content: center;
+	margin: auto;
 }
 
-.center-vertically {
+.center-horizontally {
 	display: flex;
 	align-self: center;
+}
+
+.center-children-vertically {
+	display: flex;
+	align-items: center;
 }
 
 .center-children-horizontally {
@@ -96,9 +102,9 @@ section {
 	align-items: center;
 }
 
-.center-chhildren-vertically {
+.space-between {
 	display: flex;
-	align-items: center;
+	justify-content: space-between;
 }
 
 .project {
