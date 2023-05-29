@@ -8,6 +8,10 @@
 /* Set variables */
 :root {
 	--blue: #5c92ff;
+	--red: #ff5e5e;
+	--yellow: #9b9b00;
+	--green: #00af00;
+	--cyan: #00a79c;
 	--white-on-black: #959595;
 	--white-on-gray: #acacac;
 	--black: #000000;
